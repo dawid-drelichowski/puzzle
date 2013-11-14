@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Puzzle</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="author" content="Dawid Drelichowski" />
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Puzzle</h1>
+        </header>
+        <section class="content">
+            <section class="grid">
+                <ul>
+                    <li>
+                        <ul class="row">
+                            <li class="dropzone" data-valid="1"></li>
+                            <li class="dropzone" data-valid="2"></li>
+                            <li class="dropzone" data-valid="3"></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="row">
+                            <li class="dropzone" data-valid="4"></li>
+                            <li class="dropzone" data-valid="5"></li>
+                            <li class="dropzone" data-valid="6"></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul class="row">
+                            <li class="dropzone" data-valid="7"></li>
+                            <li class="dropzone" data-valid="8"></li>
+                            <li class="dropzone" data-valid="9"></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        
+            <section class="pieces">
+                <div draggable="true" data-field="6">6</div>
+                <div draggable="true" data-field="2">2</div>
+                <div draggable="true" data-field="9">9</div>
+                <div draggable="true" data-field="4">4</div>
+                <div draggable="true" data-field="5">5</div>
+                <div draggable="true" data-field="1">1</div>
+                <div draggable="true" data-field="3">3</div>
+                <div draggable="true" data-field="7">7</div>
+                <div draggable="true" data-field="8">8</div>
+            </section>
+        </section>
+        <footer>
+            <p>Copyright &copy; Dawid Drelichowski</p>
+        </footer>
+        <script src="js/drag-and-drop.js"></script>
+    </body>
+</html>
+    
