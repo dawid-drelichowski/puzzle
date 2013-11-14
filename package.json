@@ -12,10 +12,17 @@
         "url" : "https://github.com/dawid-drelichowski/puzzle/issues"
     },
     "devDependencies": {
+        "grunt": "~0.4.1",
         "bower": "~1.2.7",
-        "jshint": "~2.3.0"
+        "grunt-contrib-jshint": "~0.6.4"
     },
     "engines": {
         "node": ">= 0.10.0"
+    },
+    "scripts": {
+        "install": "bower install",
+        "postinstall": "grunt",
+        "update": "bower update", 
+        "postupdate": "grunt"
     }
 }

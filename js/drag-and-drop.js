@@ -1,4 +1,4 @@
- (function(window) {
+(function(window) {
     'use strict';
     
     var document = window.document,
@@ -20,7 +20,7 @@
             });
         }
         return this;
-    }
+    };
     
     Sandbox.prototype.on = function (event, callback) {
         if (!this.callbacks[event]) {
@@ -28,12 +28,12 @@
         }
         this.callbacks[event].push(callback);
         return this;
-    }
+    };
     
     Sandbox.prototype.dragAndDropSupported = function() { //taken from modernizr.com
         var div = document.createElement('div');
         return ('draggable' in div) || ('ondragstart' in div && 'ondrop' in div);
-    }
+    };
     
     function Draggable(sandbox, element) {
         var self = this;
@@ -56,7 +56,7 @@
         event.dataTransfer.dropEffect = 'move';
         
         event.dataTransfer.setData('text/plain', '1'); //Firefox effectAllowed and dropEffect bugfix
-    }
+    };
 
     Draggable.prototype.leave = function(event) {
         var classList = event.target.classList;
@@ -64,7 +64,7 @@
         if (classList) {
             classList.remove('draggable-current');
         }
-    }
+    };
     
     function Dropzone(sandbox, element) {
         var self = this;
@@ -85,7 +85,7 @@
         if (this.draggableCurrent === event.target.getAttribute('data-valid')) {
             event.preventDefault();
         }
-    }
+    };
     
     Dropzone.prototype.drop = function(event) {
         var target = event.target,
@@ -95,7 +95,7 @@
             element = document.querySelector('[data-field="' + this.draggableCurrent + '"]');
             target.appendChild(element);
         }
-    }
+    };
     
     sandbox = new Sandbox();
     

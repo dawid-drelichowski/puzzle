@@ -1,0 +1,25 @@
+{
+    "maxparams": 5,
+    "maxdepth": 5,
+    "maxstatements": 25,
+    "maxcomplexity": 10,
+    "camelcase": true,
+    "curly": true,
+    "eqeqeq": true,
+    "immed": true,
+    "indent": 4,
+    "quotmark": "single",
+    "latedef": true,
+    "newcap": true,
+    "noarg": true,
+    "sub": true,
+    "undef": true,
+    "unused" : true,
+    "eqnull": true,
+    "nomen": true,
+    "expr": true,
+    "globals": {
+        "window": true,
+        "module": true
+    }
+}
