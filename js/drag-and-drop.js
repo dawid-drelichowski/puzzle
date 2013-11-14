@@ -1,5 +1,10 @@
- (function(document) {
+ (function(window) {
     'use strict';
+    
+    var document = window.document,
+        sandbox,
+        draggable,
+        dropzone;
     
     function Sandbox() {
         this.callbacks = {};   
@@ -23,6 +28,11 @@
         }
         this.callbacks[event].push(callback);
         return this;
+    }
+    
+    Sandbox.prototype.dragAndDropSupported = function() { //taken from modernizr.com
+        var div = document.createElement('div');
+        return ('draggable' in div) || ('ondragstart' in div && 'ondrop' in div);
     }
     
     function Draggable(sandbox, element) {
@@ -82,14 +92,20 @@
             element; 
 
         if (this.draggableCurrent === target.getAttribute('data-valid')) {
-            element = document.querySelector('[data-field="' + this.draggableCurrent + '"]'); 
+            element = document.querySelector('[data-field="' + this.draggableCurrent + '"]');
             target.appendChild(element);
         }
     }
     
-    var sandbox = new Sandbox(),
-        draggable = document.querySelectorAll('[draggable="true"]'),
-        dropzone = document.querySelectorAll('.dropzone');
+    sandbox = new Sandbox();
+    
+    if (!sandbox.dragAndDropSupported()) {
+        window.alert('Sorry! Your browser is too old to support this puzzle game. Please upgrade it.');
+        return;
+    }
+    
+    draggable = document.querySelectorAll('[draggable="true"]');
+    dropzone = document.querySelectorAll('.dropzone');
         
     [].forEach.call(draggable, function(element) {
         new Draggable(sandbox, element);
@@ -99,4 +115,4 @@
         new Dropzone(sandbox, element);
     });
                 
-})(document);
+})(window);

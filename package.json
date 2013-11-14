@@ -1,0 +1,21 @@
+{
+    "name": "puzzle",
+    "title": "Puzzle",
+    "description": "Pure JavaScript drag and drop puzzle",
+    "version": "0.0.1",
+    "homepage": "https://github.com/dawid-drelichowski/puzzle",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/dawid-drelichowski/puzzle.git"
+    },
+    "bugs" : {
+        "url" : "https://github.com/dawid-drelichowski/puzzle/issues"
+    },
+    "devDependencies": {
+        "bower": "~1.2.7",
+        "jshint": "~2.3.0"
+    },
+    "engines": {
+        "node": ">= 0.10.0"
+    }
+}

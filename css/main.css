@@ -6,16 +6,34 @@ ul {
 ul.row {
     margin: 0;
 }
-footer, ul.row:last-child {
+h1 {
+    text-align: center;
+}
+footer {
+    clear: left;
+    text-align: center;
+}
+ul.row:last-child {
     clear: left;
 }
 ul.row li {
     float: left;
-    border: 1px solid black;
+    border: 1px solid #3E9EBD;
 }
 .dropzone {
     width: 100px;
     height: 100px;
+}
+.grid {
+    width: 300px;
+    margin: auto;
+}
+.pieces {
+    width: 430px;
+    height: 230px;
+    padding: 15px;
+    background-color: #BC3E2B;
+    margin: 20px auto;
 }
 .draggable-current {
     opacity: 0.6;
@@ -24,11 +42,12 @@ ul.row li {
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     width: 100px;
     height: 100px;
     float: left;
-    border: 1px solid black;
+    border: 1px solid #BC3E2B;
     background-image: url("../img/logo.png");
 }
 [data-field="2"] {
