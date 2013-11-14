@@ -1,6 +1,6 @@
 Simple drag and drop puzzle game
 
-Main goal was, to use native html5 drag and drop feature, without usage of any JavaScript framework.
+Main goal was to use native html5 drag and drop feature, without usage of any JavaScript framework.
 
 What is missing:
 - message that puzzle is finnished
