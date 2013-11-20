@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dawid-drelichowski/puzzle.png?branch=master)](https://travis-ci.org/dawid-drelichowski/puzzle)
+
 Simple drag and drop puzzle game
 
 Main goal was to use native html5 drag and drop feature, without usage of any JavaScript framework.
