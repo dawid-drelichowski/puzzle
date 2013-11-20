@@ -6,7 +6,6 @@ What is missing:
 - message that puzzle is finnished
 - better puzzle borders view
 - better layout
-- JavaScript unit tests
 
 Instalation:
 You need to have Node.js version more or equal 10.0.0 installed
