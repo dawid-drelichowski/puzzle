@@ -14,15 +14,17 @@
     "devDependencies": {
         "grunt": "~0.4.1",
         "bower": "~1.2.7",
-        "grunt-contrib-jshint": "~0.6.4"
+        "grunt-contrib-jshint": "~0.6.4",
+        "grunt-karma": "0.6.0",
+        "karma-mocha": "~0.0.1",
+        "karma-chai-plugins": "~0.1.3"
     },
     "engines": {
         "node": ">= 0.10.0"
     },
     "scripts": {
         "install": "bower install",
-        "postinstall": "grunt",
-        "update": "bower update", 
-        "postupdate": "grunt"
+        "update": "bower update",
+        "test": "grunt"
     }
 }

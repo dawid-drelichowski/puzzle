@@ -114,5 +114,9 @@
     [].forEach.call(dropzone, function(element) {
         new Dropzone(sandbox, element);
     });
-                
+    
+    //for tests purposes
+    window.Sandbox = Sandbox;
+    window.Draggable = Draggable;
+    window.Dropzone = Dropzone;
 })(window);

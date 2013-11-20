@@ -20,6 +20,9 @@
     "expr": true,
     "globals": {
         "window": true,
-        "module": true
+        "module": true,
+        "describe": true,
+        "it": true,
+        "expect": true
     }
 }
