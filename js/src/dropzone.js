@@ -1,10 +1,10 @@
 define(function() {
     'use strict';
-    
+
     function Dropzone(sandbox, element) {
         var self = this;
         this.draggableCurrent = 0;
-        
+
         sandbox.on('draggable.current', function(field){
             self.draggableCurrent = field;
         });
@@ -15,13 +15,13 @@ define(function() {
             self.drop.apply(self, arguments);
         }, false);
     }
-    
+
     Dropzone.prototype.over = function(event) {
         if (this.draggableCurrent === event.target.getAttribute('data-valid')) {
             event.preventDefault();
         }
     };
-    
+
     Dropzone.prototype.drop = function(event) {
         var target = event.target,
             element; 

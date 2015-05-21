@@ -1,4 +1,6 @@
 {
+    "browser": true,
+    "mocha": true,
     "maxparams": 5,
     "maxdepth": 5,
     "maxstatements": 25,
@@ -19,11 +21,8 @@
     "nomen": true,
     "expr": true,
     "globals": {
-        "window": true,
-        "describe": true,
-        "it": true,
-        "beforeEach": true,
-        "define": true,
-        "require": true
+      "define": true,
+      "require": true,
+      "expect": true
     }
 }

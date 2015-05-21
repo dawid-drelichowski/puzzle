@@ -1,10 +1,10 @@
 define(function() {
     'use strict';
-    
+
     function Draggable(sandbox, element) {
         var self = this;
         this.sandbox = sandbox;
-        
+
         element.addEventListener('dragstart', function () {
             self.start.apply(self, arguments);
         }, false);
@@ -31,6 +31,6 @@ define(function() {
             classList.remove('draggable-current');
         }
     };
-    
+
     return Draggable;
 });

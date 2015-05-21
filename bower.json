@@ -1,8 +1,8 @@
 {
     "name": "puzzle",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "dependencies": {
-        "bootstrap": "~3.0.2",
-        "requirejs": "~2.1.9"
+        "bootstrap": "~3.3.4",
+        "requirejs": "~2.1.17"
     }
 }

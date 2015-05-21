@@ -3,7 +3,7 @@ module.exports = function(config) {
         frameworks: ['mocha', 'requirejs', 'chai'],
         files: [
             'js/tests/config.js',
-            {pattern: 'js/**/*.js', included: false},
+            {pattern: 'js/**/*.js', included: false}
         ],
         reporters: ['progress'],
         port: 9876,

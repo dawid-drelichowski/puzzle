@@ -5,7 +5,7 @@ define(['sandbox', 'draggable', 'dropzone'], function(Sandbox, Draggable, Dropzo
         sandbox = new Sandbox(),
         draggable,
         dropzone;
-    
+
     if (!sandbox.dragAndDropSupported()) {
         window.alert('Sorry! Your browser is too old to support this puzzle game. Please upgrade it.');
         return;
