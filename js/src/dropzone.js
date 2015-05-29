@@ -3,6 +3,7 @@ define(function() {
 
     function Dropzone(sandbox, element) {
         var self = this;
+        this.sandbox = sandbox;
         this.draggableCurrent = 0;
 
         sandbox.on('draggable.current', function(field){
@@ -29,6 +30,8 @@ define(function() {
         if (this.draggableCurrent === target.getAttribute('data-valid')) {
             element = window.document.querySelector('[data-field="' + this.draggableCurrent + '"]');
             target.appendChild(element);
+            element.removeAttribute('draggable');
+            this.sandbox.trigger('dropzone.dropped');
         }
     };
     return Dropzone;

@@ -3,42 +3,37 @@ ul {
     padding: 0;
     list-style-type: none;
 }
-ul.row {
-    margin: 0;
-}
 h1 {
     text-align: center;
 }
 footer {
-    clear: left;
+    text-align: center;
+    padding: 1em;
+}
+.status {
     text-align: center;
 }
-ul.row:last-child {
-    clear: left;
-}
-ul.row li {
-    float: left;
-    border: 1px solid #3E9EBD;
-}
-.dropzone {
-    width: 100px;
-    height: 100px;
-}
 .grid {
-    width: 300px;
-    margin: auto;
-}
-.pieces {
-    width: 430px;
-    height: 230px;
-    padding: 15px;
-    background-color: #BC3E2B;
-    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 302px;
+    height: 302px;
+    margin: 2em auto;
 }
 .draggable-current {
     opacity: 0.6;
 }
-[draggable] {
+.text-white {
+    color: #fff;
+}
+[data-valid] {
+    background: #fff;
+    width: 100px;
+    height: 100px;
+}
+[data-field] {
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none;
@@ -46,31 +41,32 @@ ul.row li {
     user-select: none;
     width: 100px;
     height: 100px;
-    float: left;
-    border: 1px solid #BC3E2B;
     background-image: url("../img/logo.png");
 }
+[data-field="1"] {
+    background-position: 0 0;
+}
 [data-field="2"] {
-    background-position: 200px 0;   
+    background-position: 200px 0;
 }
 [data-field="3"] {
-    background-position: 100px 0;   
+    background-position: 100px 0;
 }
 [data-field="4"] {
-    background-position: 0 200px;   
+    background-position: 0 200px;
 }
 [data-field="5"] {
-    background-position: 200px 200px;   
+    background-position: 200px 200px;
 }
 [data-field="6"] {
-    background-position: 100px 200px;   
+    background-position: 100px 200px;
 }
 [data-field="7"] {
-    background-position: 0px 100px;   
+    background-position: 0 100px;
 }
 [data-field="8"] {
-    background-position: 200px 100px;   
+    background-position: 200px 100px;
 }
 [data-field="9"] {
-    background-position: 100px 100px;   
+    background-position: 100px 100px;
 }

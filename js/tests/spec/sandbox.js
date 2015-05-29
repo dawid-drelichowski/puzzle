@@ -18,11 +18,13 @@ define(['sandbox'], function(Sandbox) {
             });
             
             it('should call callback set in #on', function(done) {
+                var value = {name: 'Patricia'};
+
                 sandbox.on('test.event', function(data) {
-                    expect(data).to.deep.equal({name: 'Patricia'});
+                    expect(data).to.deep.equal(value);
                 });
                 
-                sandbox.trigger('test.event', {name: 'Patricia'});
+                sandbox.trigger('test.event', value);
                 done();
             });
         });
