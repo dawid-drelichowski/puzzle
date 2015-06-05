@@ -1,6 +1,15 @@
 {
     "name": "puzzle",
+    "description": "Pure JavaScript drag and drop puzzle",
     "version": "0.0.2",
+    "authors": [
+      {"name": "Dawid Drelichowski"}
+    ],
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/dawid-drelichowski/puzzle.git"
+    },
+    "license": "MIT",
     "dependencies": {
         "bootstrap": "~3.3.4",
         "requirejs": "~2.1.17"
