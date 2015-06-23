@@ -2,6 +2,11 @@
 
 require.config({
     baseUrl: '/base/js/src',
+    paths: {
+        text: '/base/node_modules/requirejs-text/text',
+        html: '/base/node_modules/require-html/html',
+        fixture: '/base/js/test/fixture'
+    },
     deps: (function() {
         var tests = [];
 

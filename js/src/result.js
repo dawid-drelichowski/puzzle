@@ -20,9 +20,10 @@ define(function() {
                 this.elements.progress.classList.add('hidden');
                 classList.remove('hidden');
             }
-            return;
+            return this;
         }
         this.elements.count.textContent = this.draggableCount;
+        return this;
     };
 
     return Result;

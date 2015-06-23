@@ -1,11 +1,13 @@
 define(['sandbox'], function(Sandbox) {
+    'use strict';
+
     describe('Sandbox', function() {
         var sandbox;
 
         beforeEach(function() {
             sandbox = new Sandbox();
         });
-        
+
         describe('#on', function() {
             it('should return Sandbox', function() {
                 expect(sandbox.on('test.event')).to.be.instanceof(Sandbox);

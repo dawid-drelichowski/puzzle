@@ -2,7 +2,7 @@ define(function() {
     'use strict';
 
     function Sandbox() {
-        this.callbacks = {};   
+        this.callbacks = {};
     }
 
     Sandbox.prototype.trigger = function() {

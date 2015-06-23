@@ -23,6 +23,8 @@
         "grunt-karma": "~0.10.1",
         "karma-mocha": "~0.1.10",
         "karma-requirejs": "~0.2.2",
+        "requirejs-text": "~2.0.12",
+        "require-html": "~0.0.2",
         "karma-chai-plugins": "~0.5",
         "karma-phantomjs-launcher": "~0.1.4"
     },
