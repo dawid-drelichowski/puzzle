@@ -2,11 +2,22 @@
 
 module.exports = function(grunt) {
     'use strict';
-  
+
+    var replace = {
+        files: [{
+            src: ['index.html'], dest: 'index.html'
+        }],
+        paths: {
+            dev: 'js/src/config',
+            prod: 'js/dist/app'
+        }
+    };
+
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-requirejs');
     grunt.loadNpmTasks('grunt-karma');
-    
+    grunt.loadNpmTasks('grunt-replace');
+
     grunt.initConfig({
         jshint: {
             options: {
@@ -29,8 +40,33 @@ module.exports = function(grunt) {
                     optimize: 'uglify2'
                 }
             }
+        },
+        replace: {
+            options: {
+                usePrefix: false
+            },
+            dev: {
+                options: {
+                    patterns: [{
+                        match: replace.paths.prod,
+                        replace: replace.paths.dev
+                    }]
+                },
+                files: replace.files
+            },
+            prod: {
+                options: {
+                    patterns: [{
+                        match: replace.paths.dev,
+                        replace: replace.paths.prod
+                    }]
+                },
+                files: replace.files
+            }
         }
     });
-    
+
     grunt.registerTask('default', ['jshint', 'karma']);
+    grunt.registerTask('dev', ['replace:dev']);
+    grunt.registerTask('prod', ['replace:prod', 'requirejs']);
 };
