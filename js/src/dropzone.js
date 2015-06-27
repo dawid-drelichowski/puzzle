@@ -28,6 +28,7 @@ define(function() {
             element; 
 
         if (this.draggableCurrent === target.getAttribute('data-valid')) {
+            event.preventDefault();
             element = window.document.querySelector('[data-field="' + this.draggableCurrent + '"]');
             target.appendChild(element);
             element.removeAttribute('draggable');

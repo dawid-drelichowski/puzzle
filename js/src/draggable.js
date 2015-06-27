@@ -21,7 +21,7 @@ define(function() {
         event.dataTransfer.effectAllowed = 'move';
         event.dataTransfer.dropEffect = 'move';
         
-        event.dataTransfer.setData('text/plain', '1'); //Firefox effectAllowed and dropEffect bugfix
+        event.dataTransfer.setData('text', '1'); //Firefox effectAllowed and dropEffect bugfix
     };
 
     Draggable.prototype.leave = function(event) {
